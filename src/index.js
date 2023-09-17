@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
       pair.forEach((card) => {
         setTimeout(() => {
           card.classList.toggle("element");
+          card.src = images["white"];
+          card.style.pointerEvents = "auto";
         }, 1000);
         card.classList.toggle("element");
-        card.src = images["white"];
-        card.style.pointerEvents = "auto";
       });
     }
     pair = [];
