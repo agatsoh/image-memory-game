@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom right, #ff7f50, #ffd700);
+    padding: 10px;
+    border: 2px solid black;    
+    text-align: center;
+    width: 450px;
+    margin: 0 auto;
+}
+.container>* {
+    flex: 0 0 24%;
+}
+.card {
+    height: 100px;
+    width: 100px;
+    max-width: 100px;
+    margin: 2px;
+    border-radius: 0 20%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.element {
+  animation: vibration 0.35s ease-in-out;
+}
+
+@keyframes vibration {
+  0% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(-5px); }
+}
+
+
+.card:hover {
+    box-shadow: inset 0px 0px 0px 2px rgb(8, 8, 8);
+    box-sizing: border-box;
+}
+
