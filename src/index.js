@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
 
   const checkforMatch = () => {
-    console.log("checkforMatch");
     let id1 = pair[0].getAttribute("data-id") % 8,
       id2 = pair[1].getAttribute("data-id") % 8;
     console.log(`id1 = ${id1}, id2 = ${id2}`);
@@ -46,9 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = e.target;
     let id = parseInt(card.getAttribute("data-id"));
     card.src = fruits[id % 8].path;
-    console.log("Image added for card " + id);
-    pair.push(card);
     card.style.pointerEvents = "none";
+    pair.push(card);
     if (pair.length > 1)
       setTimeout(() => {
         checkforMatch();
